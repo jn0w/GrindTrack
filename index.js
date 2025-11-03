@@ -1,8 +1,10 @@
-import { registerRootComponent } from 'expo';
+// Entry point: registers the root React component with Expo
+import { registerRootComponent } from "expo";
 
-import App from './App';
+// The main App component which sets up providers and navigation
+import App from "./App";
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
+// This wires up the native runtime to render our App component.
+// Works for both Expo Go and standalone native builds.
+// Under the hood: AppRegistry.registerComponent('main', () => App)
 registerRootComponent(App);
